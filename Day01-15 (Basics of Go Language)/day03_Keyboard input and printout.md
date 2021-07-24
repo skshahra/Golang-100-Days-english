@@ -1,22 +1,24 @@
-# 键盘输入和打印输出
 
->作者：韩茹
+
+# Keyboard input and print output
+
+>Author: Han Ru
 >
->出处：千锋教育
+>Source: Qianfeng Education
 
-## 一、打印输出
+## One, print out
 
-### 1.1 fmt包
+### 1.1 fmt package
 
-fmt包实现了类似C语言printf和scanf的格式化I/O。格式化verb（'verb'）源自C语言但更简单。
+The fmt package implements formatted I/O similar to C language printf and scanf. The formatting verb ('verb') is derived from the C language but is simpler.
 
-详见官网fmt的API：https://golang.google.cn/pkg/fmt/
+For details, please refer to the API of the official website fmt: https://golang.google.cn/pkg/fmt/
 
 ![fmtpackage](img/fmtpackage.png)
 
 
 
-### 1.2 导入包
+### 1.2 Import package
 
 ```go
 import "fmt"
@@ -24,43 +26,43 @@ import "fmt"
 
 
 
-### 1.3 常用打印函数
+### 1.3 Commonly used printing functions
 
-**打印：**
+**Print:**
 
 [func Print(a ...interface{}) (n int, err error)](https://golang.google.cn/pkg/fmt/#Print)
 
-**格式化打印：**
+**Formatted printing:**
 
 [func Printf(format string, a ...interface{}) (n int, err error)](https://golang.google.cn/pkg/fmt/#Printf)
 
-**打印后换行**
+**Wrap after printing**
 
 [func Println(a ...interface{}) (n int, err error)](https://golang.google.cn/pkg/fmt/#Println)
 
 
 
-格式化打印中的常用占位符：
+Common placeholders in formatted printing:
 
 ```
-格式化打印占位符：
-			%v,原样输出
-			%T，打印类型
-			%t,bool类型
-			%s，字符串
-			%f，浮点
-			%d，10进制的整数
-			%b，2进制的整数
-			%o，8进制
-			%x，%X，16进制
-				%x：0-9，a-f
-				%X：0-9，A-F
-			%c，打印字符
-			%p，打印地址
-			。。。
+Format and print placeholders:
+			%v, output as is
+			%T, print type
+			%t, bool type
+			%s, string
+			%f, floating point
+			%d, decimal integer
+			%b, a binary integer
+			%o, octal
+			%x, %X, hexadecimal
+				%x: 0-9, af
+				%X: 0-9, AF
+			%c, print characters
+			%p, print address
+			. . .
 ```
 
-示例代码：
+Sample code:
 
 ```go
 package main
@@ -70,12 +72,12 @@ import (
 )
 
 func main() {
-	a := 100           //int
-	b := 3.14          //float64
-	c := true          // bool
+	a := 100 //int
+	b := 3.14 //float64
+	c := true // bool
 	d := "Hello World" //string
-	e := `Ruby`        //string
-	f := 'A'
+	e := `Ruby` //string
+	f :='A'
 	fmt.Printf("%T,%b\n", a, a)
 	fmt.Printf("%T,%f\n", b, b)
 	fmt.Printf("%T,%t\n", c, c)
@@ -96,17 +98,17 @@ func main() {
 
 
 
-运行结果：
+operation result:
 
 ![yunxing1](img/yunxing1.png)
 
 
 
-## 二、键盘输入
+## Two, keyboard input
 
-### 2.1 fmt包读取键盘输入
+### 2.1 fmt package read keyboard input
 
-常用方法：
+Common methods:
 
 [func Scan(a ...interface{}) (n int, err error)](https://golang.google.cn/pkg/fmt/#Scan)
 
@@ -126,42 +128,42 @@ import (
 func main() {
 	var x int
 	var y float64
-	fmt.Println("请输入一个整数，一个浮点类型：")
-	fmt.Scanln(&x,&y)//读取键盘的输入，通过操作地址，赋值给x和y   阻塞式
-	fmt.Printf("x的数值：%d，y的数值：%f\n",x,y)
+	fmt.Println("Please enter an integer, a floating point type:")
+	fmt.Scanln(&x,&y)//Read the keyboard input, and assign values ​​to x and y by operating the address. Blocking
+	fmt.Printf("The value of x: %d, the value of y: %f\n",x,y)
 
 	fmt.Scanf("%d,%f",&x,&y)
 	fmt.Printf("x:%d,y:%f\n",x,y)
 }
 ```
 
-运行结果：
+operation result:
 
 ![yunxing2](img/yunxing2.png)
 
 
 
-### 2.2 bufio包读取
+### 2.2 bufio package reading
 
 https://golang.google.cn/pkg/bufio/
 
 
 
-bufio包中都是IO操作的方法：
+The bufio package is the method of IO operation:
 
-先创建Reader对象：
+First create the Reader object:
 
 ![bufio1](img/bufio1.png)
 
 
 
-然后就可以各种读取了：
+Then you can read in various ways:
 
 ![bufio2](img/bufio2.png)
 
 
 
-示例代码：
+Sample code:
 
 ```go
 package main
@@ -173,28 +175,29 @@ import (
 )
 
 func main() {
-	fmt.Println("请输入一个字符串：")
+	fmt.Println("Please enter a string:")
 	reader := bufio.NewReader(os.Stdin)
 	s1, _ := reader.ReadString('\n')
-	fmt.Println("读到的数据：", s1)
+	fmt.Println("Data read:", s1)
 
 }
 ```
 
-运行效果：
+running result:
 
 ![yunxing3](img/yunxing3.png)
 
 
 
-千锋Go语言的学习群：784190273
+Qianfeng Go language learning group: 784190273
 
-对应视频地址：
+Corresponding video address:
 
 https://www.bilibili.com/video/av56018934
 
 https://www.bilibili.com/video/av47467197
 
-源代码：
+Source code:
 
 https://github.com/rubyhan1314/go_foundation
+

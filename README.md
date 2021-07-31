@@ -1,20 +1,18 @@
 
 
-## Golang-100 days from novice to master
-
-> Authors: Han Ru, Davie, Steven
->
-> Recently, many friends are looking for complete learning materials for the Go language, but it takes a lot of time to record videos and tutorials. I usually prepare for the Go language subject, so the time is relatively tight. Teacher Davie and I are responsible for part of it. The output of Golang content. From technical articles, to videos, to project code. They are also published on major platforms, but Zhihu is only convenient for reading technical articles, and B station is only convenient for watching videos. So we uploaded all our learning materials on github, from the most basic entry to project design, hoping to help more partners who want to understand and learn the Go language, so that everyone can communicate and learn. We have established a learning discussion group (Go Language Learning Camp: 784190273) to join the group for learning and discussion.
->
-> Because it is continuous creation, it will continue to be updated. Some chapters have no content yet, so stay tuned. .
->
-> Creation is not easy, thank you for your support. If you find something after reading it, you can give a reward and invite the author to drink coffee. If you have any questions, you can join the group discussion.
->
-> Finally, thank you **Qianfeng Education Go Language Teaching Department** for your support.
+## Golang-100 days from noob to master
+this repo is inspired from : https://github.com/rubyhan1314/Golang-100-Days
+> Authors: sk shahriar ahmed raka
+> 
+> student of Pabna University Of Science and Technology 
 
 
+### telegram : t.me/shahriarraka
+### upwork : upwork.com/o/profiles/users/~0107ef3405bffbe57e/
+### linkedin : linkedin.com/in/sk-shahriar-ahmed-raka-862a31193/
 
-![WechatIMG723_meitu_1](img/WechatIMG724_meitu_2.jpg)
+
+![WechatIMG723_meitu_1](img/logo.png)
 
 
 
